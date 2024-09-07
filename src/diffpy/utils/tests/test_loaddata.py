@@ -7,14 +7,11 @@ import numpy
 import pytest
 
 from diffpy.utils.parsers import loadData
-from diffpy.utils.tests.testhelpers import datafile
-
-loaddata01 = datafile("loaddata01.txt")
-loaddatawithheaders = datafile("loaddatawithheaders.txt")
 
 
 ##############################################################################
-def test_loadData_default():
+def test_loadData_default(datafile):
+    loaddata01 = datafile("loaddata01.txt")
     """check loadData() with default options"""
     d2c = numpy.array([[3, 31], [4, 32], [5, 33]])
     pytest.raises(IOError, loadData, "doesnotexist")
@@ -31,7 +28,8 @@ def test_loadData_default():
     assert numpy.array_equal(d2c[:, 1], d)
 
 
-def test_loadData_1column():
+def test_loadData_1column(datafile):
+    loaddata01 = datafile("loaddata01.txt")
     """check loading of one-column data."""
     d1c = numpy.arange(1, 6)
     d = loadData(loaddata01, usecols=[0], minrows=1)
@@ -42,7 +40,8 @@ def test_loadData_1column():
     assert not numpy.array_equal(d1c, d)
 
 
-def test_loadData_headers():
+def test_loadData_headers(datafile):
+    loaddatawithheaders = datafile("loaddatawithheaders.txt")
     """check loadData() with headers options enabled"""
     hignore = ["# ", "// ", "["]  # ignore lines beginning with these strings
     delimiter = ": "  # what our data should be separated by
