@@ -1,13 +1,13 @@
 ### PyPI/GitHub rc-release preparation checklist:
 
-- [x] All PRs/issues attached to the release are merged.
-- [x] All the badges on the README are passing.
-- [x] License information is verified as correct. If you are unsure, please comment below.
-- [x] Locally rendered documentation contains all appropriate pages, including API references (check no modules are
+- [ ] All PRs/issues attached to the release are merged.
+- [ ] All the badges on the README are passing.
+- [ ] License information is verified as correct. If you are unsure, please comment below.
+- [ ] Locally rendered documentation contains all appropriate pages, including API references (check no modules are
   missing), tutorials, and other human written text is up-to-date with any changes in the code.
-- [x] Installation instructions in the README, documentation and on the website (e.g., diffpy.org) are updated. 
-- [x] Successfully run any tutorial examples or do functional testing with the latest Python version.
-- [x] Grammar and writing quality are checked (no typos).
+- [ ] Installation instructions in the README, documentation and on the website (e.g., diffpy.org) are updated. 
+- [ ] Successfully run any tutorial examples or do functional testing with the latest Python version.
+- [ ] Grammar and writing quality are checked (no typos).
 
 Please mention @sbillinge here when you are ready for PyPI/GitHub release. Include any additional comments necessary, such as version information and details about the pre-release here:
 
