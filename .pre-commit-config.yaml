@@ -67,8 +67,7 @@ repos:
         args: [--in-place, --config, ./pyproject.toml]
   # commitizen - check commit message format
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: master
+    rev: v2.20.0
     hooks:
       - id: commitizen
-      - id: commitizen-branch
-        stages: [push]
+        stages: [commit-msg]
